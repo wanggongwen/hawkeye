@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>user list</title>
+</head>
+<body>
+    <table id="dataTable" class="table table-bordered">
+
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>地址</th>
+            <th>电话</th>
+            <th>水平</th>
+            <th>时间</th>
+        </tr>
+        </thead>
+
+        <tbody th:remove="all-but-first" th:unless="${#lists.isEmpty(programmers)}">
+        <tr th:each="obj, objStat: ${programmers}">
+            <input type="hidden" th:value="${obj.id}"/>
+            <td th:text="${obj.name}"></td>
+            <td th:text="${obj.base}"></td>
+            <td th:text="${obj.tel}"></td>
+            <td th:text="${obj.level}"></td>
+            <td th:text="${obj.entryDate}"></td>
+            </td>
+        </tr>
+        </tbody>
+        <tbody th:if="${#lists.isEmpty(programmers)}">
+        <tr>
+            <td colspan="12">没有符合查询条件的记录！</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
