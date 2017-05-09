@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.dceast</groupId>
-    <artifactId>hawkeye_demo</artifactId>
+    <artifactId>hawkeye</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>hawkeye_demo</name>
+    <name>hawkeye</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -98,12 +98,6 @@
             <artifactId>guava</artifactId>
             <version>20.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
-
 
 
         <dependency>
